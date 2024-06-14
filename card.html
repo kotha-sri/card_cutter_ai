@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card</title>
+</head>
+	<body style="background-color:transparent; font-family:Calibri">
+		<div style="background-color:transparent; max-width:6.5in; position:relative;">
+			<button title="Copy Card" onclick="copyDivToClipboard()" style="cursor:pointer; z-index:9999; background-color:transparent; border:none; position:absolute; width:20pt; height:20pt; pointer-events:all; right: 0; top:0px; margin:0; padding:0;" type="button">
+				<img onmouseover="this.src='google_copy_icon_light_cyan.svg';" onmouseout="this.src='google_copy_icon_black.svg';" alt="google clipboard icon" style="width:20pt; height:20pt;" src="google_clipboard_icon.png">
+			</button>
+			<div id="card_div" style="position:absolute">
+				<p style="font-size:13pt; font-weight:bold; max-width:574px; padding:0; margin:0;">Russia and NATO tensions are growing</p>
+				<p style="font-size:13pt; font-weight:bold; padding:0; margin:0;">Dalziel 24'</p>
+				<p style="font-size:9pt; padding-bottom:9pt; margin:0;">https://www.geopoliticalmonitor.com/russias-tough-talk-on-arctic-sovereignty-must-be-taken-seriously/</p>
+				<p style="font-size:8pt; padding:0; margin:0;">So, what about Russia? There is good reason to think that Russia will be less than an amicable negotiator and not leave it to the diplomats alone. Here it is important to look at what the Russian leadership is saying on the matter. Useful resources are its main strategic documents, released over the last four years. The 2023 Foreign Policy Concept, the 2023 amendments to the 2020 Arctic Strategy, the 2022 Maritime Doctrine and the 2021 National Security Strategy reveal that <span style="font-size:11pt; background-color:#00FFFF; font-weight:bold; text-decoration:underline;">Russia indeed thinks that it has a lot at stake.</span> Canada, Denmark and the United States should take these seriously and prepare accordingly. To start, these documents make clear that the Arctic Ocean and its continental shelves are an integral part of Russia's geopolitics and prosperity. The Russian position is committed to exercising an extended jurisdiction on the Arctic Ocean's continental shelf. Significantly, the National Security Strategy identifies the military's defense of the continental shelf as a priority, a "goal of state security," which dovetails with the document's emphasis on resource exploitation rights as a function of national security and the general priority of the Arctic region in this regard. The Maritime Doctrine lists the Arctic as the top priority of maritime strategy and is outspoken on Russian interests beyond its exclusive economic zone to the continental shelf and the delimitation of maritime boundaries under international law. The Foreign Policy Concept says that Russia will "step up" (Russian: aktivizatsii) the delineating of these borders in a region it identifies as the second most important after the countries of central Asia and eastern Europe, and what it calls the "near abroad." These statements fit into a process of geopolitical transformation Russia is trying to undertake to turn into a coastal Eurasian power, defined as much by its northern maritime edge as its terrestrial land mass. While the Arctic has long been touted as central to Russian identity, global warming is opening sea lanes that also conveniently enable Russia's pivot to Asia, accelerated by the precarious relations with Europe. This vision of Arctic coastal Russia is closely tied to its prosperity agenda. The region had already been an important part of economic planning. Now it is coming to be seen as the linchpin of future economic development. <span style="font-size:11pt; background-color:#00FFFF; font-weight:bold; text-decoration:underline;">The Maritime Doctrine describes the Arctic Ocean as the only "vital" ocean to national interests, with its socio-economic development a "decisive condition" for future prosperity.</span> Seabed resources on the continental shelf, it claims, are "predetermined" to be essential to alleviating depleted terrestrial deposits (itself a questionable claim).</p>
+			</div>
+		</div>
+
+		<script>
+			function copyDivToClipboard(){
+				var range = document.createRange();
+				range.selectNode(document.getElementById("card_div"));
+				window.getSelection().removeAllRanges(); // clear current selection
+				window.getSelection().addRange(range); // to select text
+				document.execCommand("copy");
+				window.getSelection().removeAllRanges();// to deselect
+            }
+		</script>
+	</body>
+</html>

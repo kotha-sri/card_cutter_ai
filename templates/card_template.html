@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card</title>
+</head>
+	<body style="background-color:transparent; font-family:Calibri">
+		<div style="background-color:transparent; max-width:6.5in; position:relative;">
+			<button title="Copy Card" onclick="copyDivToClipboard()" style="cursor:pointer; z-index:9999; background-color:transparent; border:none; position:absolute; width:20pt; height:20pt; pointer-events:all; right: 0; top:0px; margin:0; padding:0;" type="button">
+				<img onmouseover="this.src='google_copy_icon_light_cyan.svg';" onmouseout="this.src='google_copy_icon_black.svg';" alt="google clipboard icon" style="width:20pt; height:20pt;" src="google_clipboard_icon.png">
+			</button>
+			<div id="card_div" style="position:absolute">
+				<p style="font-size:13pt; font-weight:bold; max-width:574px; padding:0; margin:0;">{{ tag }}</p>
+				<p style="font-size:13pt; font-weight:bold; padding:0; margin:0;">{{ last_name }} {{ year }}'</p>
+				<p style="font-size:9pt; padding-bottom:9pt; margin:0;">{{ citation }}</p>
+				<p style="font-size:8pt; padding:0; margin:0;">{{ card_body }}</p>
+			</div>
+		</div>
+
+		<script>
+			function copyDivToClipboard(){
+				var range = document.createRange();
+				range.selectNode(document.getElementById("card_div"));
+				window.getSelection().removeAllRanges(); // clear current selection
+				window.getSelection().addRange(range); // to select text
+				document.execCommand("copy");
+				window.getSelection().removeAllRanges();// to deselect
+            }
+		</script>
+	</body>
+</html>
