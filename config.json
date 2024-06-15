@@ -1,0 +1,12 @@
+{
+  "body_background_color": "white",
+  "font_family": "calibri",
+  "tag_font_size": "13pt",
+  "tag_is_bolded": true,
+  "citation_font_size": "9pt",
+  "content_font_size": "4pt",
+  "read_font_size": "11pt",
+  "read_is_bolded": true,
+  "read_is_underlined": true,
+  "read_highlight_color": "cyan"
+}

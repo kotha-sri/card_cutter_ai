@@ -1,0 +1,63 @@
+body {
+    background-color: white;
+    font-family: calibri;
+}
+
+.card {
+    background-color: transparent;
+    max-width: 6.5in;
+    position: relative;
+}
+
+.copy-to-clipboard-button {
+    cursor: pointer;
+    z-index: 9999;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    width: 20pt;
+    height: 20pt;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0
+}
+
+.copy-to-clipboard-img {
+    width: 20pt;
+    height: 20pt;
+}
+
+.dark:hover {
+  color: cyan;
+}
+
+.card-div {
+    position: absolute;
+}
+
+.tag {
+    font-size: 13pt;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.citation {
+    font-size: 9pt;
+    padding-bottom: 9pt;
+    margin: 0;
+}
+
+.content {
+    font-size: 4pt;
+    padding: 0;
+    margin: 0;
+}
+
+.read {
+    font-size: 11pt;
+    background-color: cyan;
+    font-weight: bold;
+    text-decoration: underline;
+}

@@ -1,0 +1,63 @@
+body {
+    background-color: {{ body_background_color }};
+    font-family: {{ font_family }};
+}
+
+.card {
+    background-color: transparent;
+    max-width: 6.5in;
+    position: relative;
+}
+
+.copy-to-clipboard-button {
+    cursor: pointer;
+    z-index: 9999;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    width: 20pt;
+    height: 20pt;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0
+}
+
+.copy-to-clipboard-img {
+    width: 20pt;
+    height: 20pt;
+}
+
+.dark:hover {
+  color: {{ read_highlight_color }};
+}
+
+.card-div {
+    position: absolute;
+}
+
+.tag {
+    font-size: {{ tag_font_size }};
+    font-weight: {{ tag_is_bolded }};
+    padding: 0;
+    margin: 0;
+}
+
+.citation {
+    font-size: {{ citation_font_size}};
+    padding-bottom: {{ citation_font_size }};
+    margin: 0;
+}
+
+.content {
+    font-size: {{ content_font_size }};
+    padding: 0;
+    margin: 0;
+}
+
+.read {
+    font-size: {{ read_font_size }};
+    background-color: {{ read_highlight_color }};
+    font-weight: {{ read_is_bolded }};
+    text-decoration: {{ read_is_underlined }};
+}
