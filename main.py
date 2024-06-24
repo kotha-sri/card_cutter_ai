@@ -1,14 +1,20 @@
 import google.generativeai as genai
 import os
 from jinja2 import FileSystemLoader, Environment
+from googlesearch import search
 from helpers import *
 
 genai.configure(api_key=os.environ['GEMINI_API_KEY'])
 
-url = 'https://politicalviolenceataglance.org/2018/02/09/how-civil-wars-end/'
-tag = "Most wars today end in negotiation"
-year = "18"
-last_name = "Howard"
+tag = "When in conflict, national sovereignty should be valued above international peacekeeping efforts"
+results = search(tag, num_results=3, lang="en")
+url = ''
+for result in results:
+    url = result
+    break
+
+year = "23"
+last_name = "WWF"
 paragraphs = get_paragraphs(url)
 site_content = " ".join(paragraphs)
 
@@ -19,9 +25,9 @@ prompt = f"Given the following text, directly quote any and all relevant informa
 
 model = genai.GenerativeModel()
 response = model.generate_content(prompt)
-print(response)
+
 response = response.text
-print(response)
+
 
 quotes = get_quote_from_response(response)
 context = get_context(quotes, paragraphs)
